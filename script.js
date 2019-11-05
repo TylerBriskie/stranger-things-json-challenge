@@ -7,7 +7,6 @@ const episodes = DATA._embedded.episodes;
 ///////////
 
 
-// console.log(episodes);
 
 let summaryWordCounts = {};
 
@@ -55,7 +54,6 @@ let firstEpisodeDustinMentioned;
 //this could be done almost verbatim on line 15
 for (i = 0; i<episodes.length; i++) {
   if(episodes[i].summary.includes('Dustin')) {
-    console.log('dustin found!')
     firstEpisodeDustinMentioned = episodes[i].id;
     break;
   }
@@ -107,4 +105,4 @@ for (var i = 0; i< episodes.length; i++){
 
 reformattedJsonBlob['episodes'] = reformattedEpisodesObject;
 
-console.log(reformattedJsonBlob);
+console.log('Task C: ', reformattedJsonBlob);
